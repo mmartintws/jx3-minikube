@@ -8,6 +8,7 @@ data:
     in_repo_config:
       enabled:
         mmartintws/jx3-minikube: true
+        mmartintws/python1: true
     plank: {}
     pod_namespace: jx
     prowjob_namespace: jx
@@ -20,6 +21,7 @@ data:
         skip-unknown-contexts: false
       merge_method:
         mmartintws/jx3-minikube: merge
+        mmartintws/python1: merge
       queries:
       - labels:
         - approved
@@ -31,6 +33,7 @@ data:
         - needs-rebase
         repos:
         - mmartintws/jx3-minikube
+        - mmartintws/python1
       - labels:
         - updatebot
         missingLabels:
@@ -41,7 +44,8 @@ data:
         - needs-rebase
         repos:
         - mmartintws/jx3-minikube
-      target_url: http://lighthouse-jx.192.168.64.6.nip.io/merge/status
+        - mmartintws/python1
+      target_url: http://lighthouse-jx.192.168.64.150.nip.io/merge/status
 kind: ConfigMap
 metadata:
   creationTimestamp: null
