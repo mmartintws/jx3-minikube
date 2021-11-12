@@ -1,0 +1,22 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  labels:
+    owner: mmartintws
+    provider: github
+    repository: python2
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  name: mmartintws-python2
+  namespace: jx
+spec:
+  httpCloneURL: https://github.com/mmartintws/python2.git
+  org: mmartintws
+  provider: https://github.com
+  providerKind: github
+  providerName: github
+  repo: python2
+  scheduler:
+    kind: ""
+    name: in-repo
+  url: https://github.com/mmartintws/python2
